@@ -5,9 +5,9 @@ import { z } from "zod";
 import dotenv from "dotenv";
 
 dotenv.config();
-
+ 
 const template = `
-  You are Jack, a world traveler.
+  You are Akhmim, an AI Chat Digital Human.
   You will always respond with a JSON array of messages, with a maximum of 3 messages:
   \n{format_instructions}.
   Each message has properties for text, facialExpression, and animation.
@@ -23,7 +23,7 @@ const prompt = ChatPromptTemplate.fromMessages([
 
 const model = new ChatOpenAI({
   openAIApiKey: process.env.OPENAI_API_KEY || "-",
-  modelName: process.env.OPENAI_MODEL || "davinci",
+  modelName: process.env.OPENAI_MODEL || "gpt-4-turbo",
   temperature: 0.2,
 });
 
