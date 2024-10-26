@@ -10,7 +10,8 @@ const getPhonemes = async ({ message }) => {
     );
     console.log(`Conversion done in ${new Date().getTime() - time}ms`);
     await execCommand({
-      command: `./bin/rhubarb -f json -o audios/message_${message}.json audios/message_${message}.wav -r phonetic`,
+      // command: `./bin/rhubarb -f json -o audios/message_${message}.json audios/message_${message}.wav -r phonetic`,
+      command: `rhubarb -f json -o audios/message_${message}.json audios/message_${message}.wav -r phonetic`,
     });
     // -r phonetic is faster but less accurate
     console.log(`Lip sync done in ${new Date().getTime() - time}ms`);

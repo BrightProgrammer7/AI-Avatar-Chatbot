@@ -1,0 +1,269 @@
+{
+  "uri": "ex.glb",
+  "mimeType": "model/gltf-binary",
+  "validatorVersion": "2.0.0-dev.3.9",
+  "validatedAt": "2024-06-21T21:54:32.302Z",
+  "issues": {
+    "numErrors": 0,
+    "numWarnings": 9,
+    "numInfos": 0,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/67"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/68"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/69"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/70"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/72"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/73"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/74"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/75"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/76"
+      }
+    ],
+    "truncated": false
+  },
+  "info": {
+    "version": "2.0",
+    "generator": "Ready Player Me",
+    "resources": [
+      {
+        "pointer": "/buffers/0",
+        "mimeType": "application/gltf-buffer",
+        "storage": "glb",
+        "byteLength": 1545528
+      },
+      {
+        "pointer": "/images/0",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/1",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/2",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/3",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/4",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/5",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/6",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/7",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/8",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/9",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/10",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/11",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/12",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/13",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 256,
+          "height": 256,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/14",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 512,
+          "height": 512,
+          "format": "rgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/15",
+        "mimeType": "image/jpeg",
+        "storage": "buffer-view",
+        "image": {
+          "width": 256,
+          "height": 256,
+          "format": "rgb",
+          "bits": 8
+        }
+      }
+    ],
+    "animationCount": 0,
+    "materialCount": 8,
+    "hasMorphTargets": true,
+    "hasSkins": true,
+    "hasTextures": true,
+    "hasDefaultScene": true,
+    "drawCallCount": 9,
+    "totalVertexCount": 7022,
+    "totalTriangleCount": 11776,
+    "maxUVs": 1,
+    "maxInfluences": 4,
+    "maxAttributes": 6
+  }
+}

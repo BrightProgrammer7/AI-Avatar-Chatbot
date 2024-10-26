@@ -53,13 +53,16 @@ export const SpeechProvider = ({ children }) => {
             try {
               await sendAudioData(audioBlob);
             } catch (error) {
-              console.error(error);
+              // console.error(error);
               alert(error.message);
             }
           };
           setMediaRecorder(newMediaRecorder);
         })
-        .catch((err) => console.error("Error accessing microphone:", err));
+        .catch((err) => {
+          alert("Error accessing microphone:", err);
+          // console.error("Error accessing microphone:", err);
+        });
     }
   }, []);
 

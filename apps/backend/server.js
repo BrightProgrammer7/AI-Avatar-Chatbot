@@ -9,7 +9,7 @@ import { convertAudioToText } from "./modules/whisper.mjs";
 dotenv.config();
 
 const elevenLabsApiKey = process.env.ELEVEN_LABS_API_KEY;
-
+  
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -41,7 +41,7 @@ app.post("/sts", async (req, res) => {
   openAImessages = await lipSync({ messages: openAImessages.messages });
   res.send({ messages: openAImessages });
 });
-
+ 
 app.listen(port, () => {
-  console.log(`Jack are listening on port ${port}`);
+  console.log(`Akhmim is listening on port ${port}`);
 });
