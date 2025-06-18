@@ -10,7 +10,11 @@ import visemesMapping from "../constants/visemesMapping";
 import morphTargets from "../constants/morphTargets";
 
 export function Avatar(props) {
-  const { nodes, materials, scene } = useGLTF("/models/avatar.glb");
+  // const { nodes, materials, scene } = useGLTF("/models/avatar.glb");
+  const { nodes, materials, scene } = useGLTF("/models/ex.glb");
+  // const { nodes, materials, scene } = useGLTF("/models/clever.glb");
+
+  
   const { animations } = useGLTF("/models/animations.glb");
   const { message, onMessagePlayed } = useSpeech();
   const [lipsync, setLipsync] = useState();
@@ -30,10 +34,11 @@ export function Avatar(props) {
     audio.onended = onMessagePlayed;
   }, [message]);
 
-
   const group = useRef();
   const { actions, mixer } = useAnimations(animations, group);
-  const [animation, setAnimation] = useState(animations.find((a) => a.name === "Idle") ? "Idle" : animations[0].name);
+  const [animation, setAnimation] = useState(
+    animations.find((a) => a.name === "Idle") ? "Idle" : animations[0].name
+  );
   useEffect(() => {
     if (actions[animation]) {
       actions[animation]
@@ -52,10 +57,17 @@ export function Avatar(props) {
     scene.traverse((child) => {
       if (child.isSkinnedMesh && child.morphTargetDictionary) {
         const index = child.morphTargetDictionary[target];
-        if (index === undefined || child.morphTargetInfluences[index] === undefined) {
+        if (
+          index === undefined ||
+          child.morphTargetInfluences[index] === undefined
+        ) {
           return;
         }
-        child.morphTargetInfluences[index] = THREE.MathUtils.lerp(child.morphTargetInfluences[index], value, speed);
+        child.morphTargetInfluences[index] = THREE.MathUtils.lerp(
+          child.morphTargetInfluences[index],
+          value,
+          speed
+        );
       }
     });
   };
@@ -90,7 +102,10 @@ export function Avatar(props) {
       const currentAudioTime = audio.currentTime;
       for (let i = 0; i < lipsync.mouthCues.length; i++) {
         const mouthCue = lipsync.mouthCues[i];
-        if (currentAudioTime >= mouthCue.start && currentAudioTime <= mouthCue.end) {
+        if (
+          currentAudioTime >= mouthCue.start &&
+          currentAudioTime <= mouthCue.end
+        ) {
           appliedMorphTargets.push(visemesMapping[mouthCue.value]);
           lerpMorphTarget(visemesMapping[mouthCue.value], 1, 0.2);
           break;
@@ -127,14 +142,15 @@ export function Avatar(props) {
             if (key === "eyeBlinkLeft" || key === "eyeBlinkRight") {
               return;
             }
-            const value = node.morphTargetInfluences[node.morphTargetDictionary[key]];
+            const value =
+              node.morphTargetInfluences[node.morphTargetDictionary[key]];
             if (value > 0.01) {
               emotionValues[key] = value;
             }
           });
         }
       });
-      console.log(JSON.stringify(emotionValues, null, 2));
+      // console.log(JSON.stringify(emotionValues, null, 2));
     }),
   });
 
@@ -207,15 +223,24 @@ export function Avatar(props) {
         morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary}
         morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences}
       />
+      {nodes.Wolf3D_Glasses && (
+        <skinnedMesh
+          geometry={nodes.Wolf3D_Glasses.geometry}
+          material={materials.Wolf3D_Glasses}
+          skeleton={nodes.Wolf3D_Glasses.skeleton}
+        />
+      )}
+      {nodes.Wolf3D_Headwear && (
+        <skinnedMesh
+          geometry={nodes.Wolf3D_Headwear.geometry}
+          material={materials.Wolf3D_Headwear}
+          skeleton={nodes.Wolf3D_Headwear.skeleton}
+        />
+      )}
       <skinnedMesh
-        geometry={nodes.Wolf3D_Glasses.geometry}
-        material={materials.Wolf3D_Glasses}
-        skeleton={nodes.Wolf3D_Glasses.skeleton}
-      />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Headwear.geometry}
-        material={materials.Wolf3D_Headwear}
-        skeleton={nodes.Wolf3D_Headwear.skeleton}
+        geometry={nodes.Wolf3D_Hair.geometry}
+        material={materials.Wolf3D_Hair}
+        skeleton={nodes.Wolf3D_Hair.skeleton}
       />
       <skinnedMesh
         geometry={nodes.Wolf3D_Body.geometry}
@@ -241,4 +266,6 @@ export function Avatar(props) {
   );
 }
 
-useGLTF.preload("/models/avatar.glb");
+// useGLTF.preload("/models/avatar.glb");
+useGLTF.preload("/models/ex.glb");
+// useGLTF.preload("/models/clever.glb");
